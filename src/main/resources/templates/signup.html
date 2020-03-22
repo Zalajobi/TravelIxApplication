@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<meta charset="utf-8">
+		<title>SignUp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Travelix Project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+		<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+		<link rel="stylesheet" type="text/css" href="styles/common/main_styles.css">
+		<link rel="stylesheet" type="text/css" href="styles/common/responsive.css">
+		<link rel="stylesheet" href="styles/signup/signup.css">
+		<script rel="script" type="text/javascript" src="js/signup/countries.js"></script>
+	</head>
+
+	<body>
+	<div class="super_container">
+		<div class="container" th:replace="common/header::header"></div>
+
+		<div class="wrapper">
+			<div style="background-image: url(https://res.cloudinary.com/zalajobi/image/upload/v1584703092/TravelIx/signuplogin/signuplogin_passengers-signup_gu72mh.jpg); background-repeat: no-repeat; background-size: cover" th:style="'background-image: url(https://res.cloudinary.com/zalajobi/image/upload/v1584703092/TravelIx/signuplogin/signuplogin_passengers-signup_gu72mh.jpg);background-repeat: no-repeat; background-size:cover;'" class="image-holder">
+			</div>
+			<div class="form-inner" style="padding-bottom: 20px; padding-top: 200px;">
+				<form th:action="@{/travelix.ng/signup}" method="post" th:object="${userInfo}">
+					<div class="form-header">
+						<h3>Sign up</h3>
+						<img src="https://res.cloudinary.com/zalajobi/image/upload/v1584703091/TravelIx/signuplogin/signuplogin_sign-up_jdjane.png" th:src="@{https://res.cloudinary.com/zalajobi/image/upload/v1584703091/TravelIx/signuplogin/signuplogin_sign-up_jdjane.png}" alt="" class="sign-up-icon">
+					</div>
+					<div class="form-group">
+						<label for="userName">Username:</label>
+						<input type="text" id="userName" class="form-control" th:field="*{username}" name="username">
+					</div>
+					<div class="form-group" data-validate = "Valid email is required: ex@abc.xyz">
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" th:field="*{email}" class="form-control" data-validation="email" name="email">
+					</div>
+					<div class="form-group">
+						<label for="firstName">First Name:</label>
+						<input type="text" id="firstName" th:field="*{firstName}" class="form-control" autocomplete="on" name="firstname">
+					</div>
+					<div class="form-group">
+						<label for="lastName">Last Name:</label>
+						<input type="text" id="lastName" th:field="*{lastName}" class="form-control" autocomplete="on" name="lastname">
+					</div>
+					<div class="form-group">
+						<label for="country">Nationality:</label>
+						<select id="country" th:field="*{nationality}" class="countrylist form-control" name ="country"></select>
+					</div>
+					<div class="form-group">
+						<label for="state">Region:</label>
+						<select name ="state" id ="state" th:field="*{region}" class="countrylist form-control"></select>
+					</div>
+					<div class="form-group" data-validate="Password is required">
+						<label for="password">Password:</label>
+						<input data-validation="password" type="password" id="password" th:field="*{password}" onkeydown="checkPassword()" onkeyup="checkPassword()" class="form-control" name="password">
+                        <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" onkeyup="checkPassword()" onkeydown="checkPassword()" class="form-control" name="confirmPassword">
+                    </div>
+					<button id="shortPassword" type="button" class="btn btn-danger text-uppercase" disabled>Password less than 5</button>
+					<button id="passwordmismatch" type="button" class="btn btn-danger text-uppercase" disabled>Password does not match</button>
+
+					<button type="submit" id="submit" onmouseover="emptyField()">create my account</button>
+					<h1 id="idline"></h1>
+				</form>
+				<div style="text-align: center; margin-top: 20px; margin-bottom: 5px">
+					<p>Sign up with social platforms</p>
+				</div>
+				<div class="socials" style="display: block ruby; margin-top: 20px">
+					<div style="display: block;">
+						<form action="/connect/facebook" method="POST">
+							<a href="/facebooksignup" class="socials-icon">
+								<i class="zmdi zmdi-facebook"></i>
+							</a>
+						</form>
+					</div>
+					<div style="display: block;">
+						<form>
+							<a href="" class="socials-icon">
+								<i class="zmdi zmdi-google"></i>
+							</a>
+						</form>
+					</div>
+					<div style="display: block;">
+						<form>
+							<a href="" class="socials-icon">
+								<i class="zmdi zmdi-instagram"></i>
+							</a>
+						</form>
+					</div>
+					<div style="display: block">
+						<form>
+							<a href="" class="socials-icon">
+								<i class="zmdi zmdi-twitter"></i>
+							</a>
+						</form>
+					</div>
+					<div style="display: block">
+						<form>
+							<a href="" class="socials-icon">
+								<i class="zmdi zmdi-tumblr"></i>
+							</a>
+						</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div th:replace="common/footer::footer"></div>
+		<script src="js/common/jquery/jquery-3.2.1.min.js"></script>
+		<script src="js/common/jquery/jquery.form-validator.min.js"></script>
+		<script src="styles/bootstrap4/popper.js"></script>
+		<script src="styles/bootstrap4/bootstrap.min.js"></script>
+		<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+		<script src="plugins/easing/easing.js"></script>
+		<script src="js/common/custom.js"></script>
+		<script src="js/signup/main.js"></script>
+		<script language="javascript">
+			populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+			populateCountries("country2");
+			populateCountries("country2");
+		</script>
+	</body>
+</html>
