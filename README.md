@@ -1,4 +1,9 @@
 # TravelIxApplication
 
 
-Implementing TboHolidays API for online booking of Hotels
+# Technology
+- Java Spring
+- Tbo Holiday API
+- JavaScript
+
+Implementation of TboHoliday API to search and Book Hotel
