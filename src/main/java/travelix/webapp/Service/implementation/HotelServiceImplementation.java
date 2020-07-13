@@ -46,7 +46,7 @@ public class HotelServiceImplementation implements HotelService {
         //XML query code
         String xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                 "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                "\t<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\"></hot:Credentials>\n" +
+                "\t<hot:Credentials UserName=\"testuser\" Password=\"testpwd\"></hot:Credentials>\n" +
                 "\t<wsa:Action>http://TekTravel/HotelBookingApi/CountryList</wsa:Action>\n" +
                 "\t<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
                 "</soap:Header>\n" +
@@ -67,7 +67,7 @@ public class HotelServiceImplementation implements HotelService {
             //XML query code
             String xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                     "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                    "\t<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\"></hot:Credentials>\n" +
+                    "\t<hot:Credentials UserName=\"testuser\" Password=\"testpwd\"></hot:Credentials>\n" +
                     "\t<wsa:Action>http://TekTravel/HotelBookingApi/TopDestinations</wsa:Action>\n" +
                     "\t<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
                     "</soap:Header>\n" +
@@ -137,7 +137,7 @@ public class HotelServiceImplementation implements HotelService {
             //XML query
             String xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                     "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                    "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                    "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                     "</hot:Credentials>\n" +
                     "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                     "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -196,7 +196,7 @@ public class HotelServiceImplementation implements HotelService {
 
         String xml = "<soap:Envelope xmlns:hot=\"http://TekTravel/HotelBookingApi\" xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">\n" +
                 "      <soap:Header xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">\n" +
-                "        <hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\"></hot:Credentials>\n" +
+                "        <hot:Credentials UserName=\"testuser\" Password=\"testpwd\"></hot:Credentials>\n" +
                 "        <wsa:Action>http://TekTravel/HotelBookingApi/HotelDetails</wsa:Action>\n" +
                 "        <wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
                 "      </soap:Header>\n" +
@@ -217,7 +217,7 @@ public class HotelServiceImplementation implements HotelService {
 
         String xmlRequest = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                 "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                 "</hot:Credentials>\n" +
                 "<wsa:Action>http://TekTravel/HotelBookingApi/AvailableHotelRooms</wsa:Action>\n" +
                 "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -299,7 +299,7 @@ public class HotelServiceImplementation implements HotelService {
                 //XML query
                 String child1xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                         "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                        "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                        "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                         "</hot:Credentials>\n" +
                         "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                         "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -339,7 +339,7 @@ public class HotelServiceImplementation implements HotelService {
                 //XML query
                 String child2xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                         "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                        "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                        "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                         "</hot:Credentials>\n" +
                         "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                         "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -380,7 +380,7 @@ public class HotelServiceImplementation implements HotelService {
                 //XML query
                 String child3xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                         "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                        "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                        "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                         "</hot:Credentials>\n" +
                         "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                         "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -422,7 +422,7 @@ public class HotelServiceImplementation implements HotelService {
                 //XML query
                 String child4xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                         "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                        "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                        "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                         "</hot:Credentials>\n" +
                         "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                         "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -499,7 +499,7 @@ public class HotelServiceImplementation implements HotelService {
 
         String xmlQuery = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                 "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                 "</hot:Credentials>\n" +
                 "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                 "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -554,7 +554,7 @@ public class HotelServiceImplementation implements HotelService {
 
         String xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                 "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                 "</hot:Credentials>\n" +
                 "<wsa:Action>http://TekTravel/HotelBookingApi/HotelSearch</wsa:Action>\n" +
                 "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -600,7 +600,7 @@ public class HotelServiceImplementation implements HotelService {
             for (int count = 1; count <= noOfRoomsAvailable; count++) {
                 String xmlSoapRequest = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                         "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                        "<hot:Credentials UserName=\"quantum\" Password=\"Qua@83309425\">\n" +
+                        "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                         "</hot:Credentials>\n" +
                         "<wsa:Action>http://TekTravel/HotelBookingApi/HotelCancellationPolicy</wsa:Action>\n" +
                         "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
@@ -891,7 +891,7 @@ public class HotelServiceImplementation implements HotelService {
 
         String xml = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:hot=\"http://TekTravel/HotelBookingApi\">\n" +
                 "<soap:Header xmlns:wsa='http://www.w3.org/2005/08/addressing' >\n" +
-                "<hot:Credentials UserName=\"RoyalConnectTravelsTest\" Password=\"Roy@45262537\">\n" +
+                "<hot:Credentials UserName=\"testuser\" Password=\"testpwd\">\n" +
                 "</hot:Credentials>\n" +
                 "<wsa:Action>http://TekTravel/HotelBookingApi/DestinationCityList</wsa:Action>\n" +
                 "<wsa:To>https://api.tbotechnology.in/hotelapi_v7/hotelservice.svc</wsa:To>\n" +
